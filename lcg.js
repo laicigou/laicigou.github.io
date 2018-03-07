@@ -1,6 +1,10 @@
-LoadJs('https://laicigou.github.io/humane.min.js');
-LoadCss('https://laicigou.github.io/original.css');
-/* 	javascript:(function(){try{var a=document.createElement('SCRIPT');a.type='text/javascript',a.src='http://127.0.0.1/gsnet/1.js?'+(new Date).getTime()/1e5,a.charset='utf-8',document.getElementsByTagName('head')[0].appendChild(a)}catch(b){alert(b)}})();	 */
+var dqwz56465 = window.location.host;
+if(dqwz56465!='pet-chain.baidu.com'){
+	alert('请在莱茨狗的页面打开此插件，如 https://pet-chain.baidu.com/ ');
+}else{
+LoadJs('//55haohuo.duapp.com/humane.min.js');
+LoadCss('//55haohuo.duapp.com/original.css');
+/* 	javascript:(function(){try{var a=document.createElement('SCRIPT');a.type='text/javascript',a.src='//55haohuo.duapp.com/lcg.js?'+(new Date).getTime()/1e5,a.charset='utf-8',document.getElementsByTagName('head')[0].appendChild(a)}catch(b){alert(b)}})(); */
 var css1='height:990px;width:1100px;position: absolute;top: 10px;right: 30px;padding: 5px;border-radius: 5px;box-shadow: rgb(92, 184, 229) 0px 0px 2px; -webkit-box-shadow: rgb(92, 184, 229) 0px 0px 2px;background-color: rgba(255, 255, 255, 1) !important;z-index: 2;'; 
 var css2='display:inline-block;margin-top:15px;margin-bottom:10px;vertical-align:middle;text-decoration:none;color:rgb(255,255,255);background-color:rgb(233,104,107);text-align:center;cursor:pointer;white-space:nowrap;box-shadow:rgba(0,0,0,0.117647) 0px 2px 6px,rgba(0,0,0,0.239216) 0px 1px 2px;font-family:微软雅黑;border-width:initial;border-style:none;border-color:initial;border-image:initial;outline:0px;padding:8px 18px;overflow:hidden;transition:0.2s ease-out;border-radius:2px;';
 var css3='display:inline-block;margin-top:0px;margin-bottom:0px;vertical-align:middle;text-decoration:none;color:rgb(255,255,255);background-color:rgb(233,104,107);text-align:center;cursor:pointer;white-space:nowrap;box-shadow:rgba(0,0,0,0.117647) 0px 2px 6px,rgba(0,0,0,0.239216) 0px 1px 2px;font-family:微软雅黑;border-width:initial;border-style:none;border-color:initial;border-image:initial;outline:0px;padding:1px 18px;overflow:hidden;transition:0.2s ease-out;border-radius:2px;';
@@ -12,12 +16,12 @@ htbody+='<div id="wddd"><div>';
 htbody+='</div></div></div></div> <p style="'+css2+'"><a onclick="jxhqwddd()" href="###">继续加载订单</a></p></div>';
 document.body.innerHTML =htbody;
 
-var ptgjg=666*1.5;
-var xygjg=1180*1.5;
-var zygjg=2560*1.5;
-var ssgjg=12000*1.5;
-var shgjg=388000*1.5;
-var csgjg=999999999;
+
+
+var szcsgjg=[0,0,0,0,0,0];
+for(var i = 0 ;i < 6;i++){  
+      szcsgjg[i]=getCookie("szcsgjg"+i)
+    }  
 
 var ggyyl=[0,0,0,0,0,0];/* 狗狗的拥有量 */
 
@@ -26,9 +30,12 @@ var ht1='<div style="'+css1+'">';
 ht1+='<p style="'+css2+'"><a onclick="hqzjdg()" href="###">获取自己的狗</a></p> <input id="dx1" type="checkbox">同时获取狗的稀数 '+'  <!--<p style="'+css2+'"><a onclick="test()" href="###">test</a></p> -->';
 ht1+='<pre id="sjsz">拥有数量：普通 0个		稀有 0个		卓越 0个		史诗 0个		神话 0个		传说 0个';
 ht1+='			约等：0微积分</pre><pre>出售价格：';
-ht1+='普通<input type="text" id="jg0" value="'+ptgjg+'" size="1">	稀有<input type="text" id="jg1" value="'+xygjg+'" size="1">';
-ht1+='	卓越<input type="text" id="jg2" value="'+zygjg+'" size="1">	史诗<input type="text" id="jg3" value="'+ssgjg+'" size="4">';
-ht1+='	神话<input type="text" id="jg4" value="'+shgjg+'" size="6">	传说<input type="text" id="jg5" value="'+csgjg+'" size="9"></pre>';
+ht1+='普通<input type="text" id="jg0" value="'+szcsgjg[0]+'" size="1" onkeyup="setcsgjg(0)">	';
+ht1+='稀有<input type="text" id="jg1" value="'+szcsgjg[1]+'" size="1" onkeyup="setcsgjg(1)">	';
+ht1+='卓越<input type="text" id="jg2" value="'+szcsgjg[2]+'" size="1" onkeyup="setcsgjg(2)">	';
+ht1+='史诗<input type="text" id="jg3" value="'+szcsgjg[3]+'" size="4" onkeyup="setcsgjg(3)">	';
+ht1+='神话<input type="text" id="jg4" value="'+szcsgjg[4]+'" size="6" onkeyup="setcsgjg(4)">	';
+ht1+='传说<input type="text" id="jg5" value="'+szcsgjg[5]+'" size="9" onkeyup="setcsgjg(5)"></pre>';
 ht1+='<div id="gous"></div>';
 
 ht1+='';
@@ -41,6 +48,15 @@ document.getElementById("a1").innerHTML = ht1;
 
 
 hqyhxx();
+
+}
+function setcsgjg(i){              
+	setCookieD("szcsgjg"+i,document.getElementById("jg"+i).value,365)
+}
+
+
+var t2 = window.setInterval("hqwddd()",20000); 
+
 function hqyhxx(){              
 	var url = "https://pet-chain.baidu.com/data/user/get";
 	var datas='{"requestId":'+(new Date).getTime()+',"appId":1,"tpl":"","timeStamp":null,"nounce":null,"token":null}';
@@ -57,10 +73,11 @@ function hqyhxxFun(){
         var obj = JSON.parse(b); //由JSON字符串转换为JSON对象   
 		errorMsg=obj.errorMsg;
 		if(errorMsg=='success'){
+			document.getElementById("yhxx").innerHTML ='';
 			ht_55as445 ='<div class="personal router-view"><div class="personal-info"><div class=""><div class="headIcon"><img src="'+obj.data['headIcon']+'" alt="" class="head-icon"></div></div> <div class=""><h3 class="name">'+obj.data['userName']+'</h3> <p class="price">'+obj.data['amount']+'&nbsp;微积分</p>'+hqyhxxht+'</div></div></div>';
 			
 			document.getElementById("yhxx").innerHTML =ht_55as445;
-			msg('original',800,'获取用户信息成功！');
+			//msg('original',800,'成功');
 
 		}else{
 			msg('original',1500,'获取用户信息失败！！！！！！');
@@ -170,6 +187,12 @@ function hqwdddFun(){
 			transDate=obj.data['dataList'][i].transDate;
 			if(obj.data['dataList'][i].txnStatus==1){
 				ht2+='<div class="order-list"><dl><dt class="dog-img" style="background-color: rgb(255, 249, 197);"><img src="'+obj.data['dataList'][i].petUrl+'" onerror="this.onerror=null; this.style.height=0;"></dt> <dd class="dog-info"><!----> <!----> <h3 class="dog-name">小莱 '+obj.data['dataList'][i].id+'</h3> <div class="date">'+transDate+'</div></dd> <dd class="txn-status"><p class="txn">上链中</p> <!----></dd> <!----></dl></div>';
+				if(obj.data['dataList'][i].status==2){
+					if(riqi==transDate){jrmr++;}
+				}else{
+					if(riqi==transDate){jrmc++;}
+				}
+				
 			}else{
 				ht2+='<div class="order-list"><dl><dt class="dog-img"style="background-color: rgb(255, 249, 197);"><img src="'+obj.data['dataList'][i].petUrl+'"onerror="this.onerror=null; this.style.height=0;"></dt><dd class="dog-info"><span class="tag">'+mm[obj.data['dataList'][i].status]+'</span><!----><h3 class="dog-name">小莱 '+obj.data['dataList'][i].id+'</h3><div class="date">'+transDate+'</div></dd><!----><dd class="price">';
 				if(obj.data['dataList'][i].status==2){
@@ -184,6 +207,7 @@ function hqwdddFun(){
 		}
 		document.getElementById("wddd").innerHTML += ht2;
 		document.getElementById("mrmcs").innerHTML = '今天已买入 '+jrmr+' 条狗，卖出 '+jrmc+' 条狗';
+		hqyhxx();
 
 		if(ddpageNo==zys){
 			ddpageNo=1; 
@@ -388,13 +412,17 @@ function gbewm(petId){
 function ksmg(petId,lsdj,ggssid){
 	var lsjg='999999999';
 	lsjg=document.getElementById('jg'+lsdj).value;
-	var url = "https://pet-chain.baidu.com/data/market/salePet";
-	var datas='{"petId":"'+petId+'","amount":"'+lsjg+'","requestId":'+(new Date).getTime()+',"appId":1,"tpl":"","timeStamp":null,"nounce":null,"token":null}';
-	xmlHttpRequest = createXmlHttpRequest();  //1.创建XMLHttpRequest组建       
-    xmlHttpRequest.onreadystatechange =function(){ksmgFun(petId,lsdj,ggssid,lsjg)};  //2.设置回调函数     
-    xmlHttpRequest.open("POST",url,true);//3.初始化XMLHttpRequest组建
-	xmlHttpRequest.setRequestHeader("Content-type", "application/json;charset=UTF-8");  //用POST的时候一定要有这句	
-    xmlHttpRequest.send(datas);  //4.发送请求 
+	if(lsjg>0){
+		var url = "https://pet-chain.baidu.com/data/market/salePet";
+		var datas='{"petId":"'+petId+'","amount":"'+lsjg+'","requestId":'+(new Date).getTime()+',"appId":1,"tpl":"","timeStamp":null,"nounce":null,"token":null}';
+		xmlHttpRequest = createXmlHttpRequest();  //1.创建XMLHttpRequest组建       
+		xmlHttpRequest.onreadystatechange =function(){ksmgFun(petId,lsdj,ggssid,lsjg)};  //2.设置回调函数     
+		xmlHttpRequest.open("POST",url,true);//3.初始化XMLHttpRequest组建
+		xmlHttpRequest.setRequestHeader("Content-type", "application/json;charset=UTF-8");  //用POST的时候一定要有这句	
+		xmlHttpRequest.send(datas);  //4.发送请求 
+	}else{
+		msg('original',1500,'请在上面输入你要出售的价格！');
+	}
 }
 
 
@@ -682,4 +710,17 @@ function msg(css,time,str) {
 	humane.baseCls = 'humane-'+css;
 	humane.timeoutAfterMove = time;
 	humane.log(str);
+}
+/* 设置cookies */
+function setCookieD(name,value,Days){
+var exp = new Date(); 
+exp.setTime(exp.getTime() + Days*24*60*60*1000);
+document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+/* 读取cookies */
+function getCookie(name)
+{
+var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+if(arr=document.cookie.match(reg)) return unescape(arr[2]);
+else return null;
 }
